@@ -13,13 +13,11 @@ function App() {
         Milk Tracker
       </Typography>
       <Container>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/price-updater" element={<PriceUpdater />} />
-            <Route path="/summary" element={<Summary />} />
-          </Routes>
-        </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/price-updater" element={<PriceUpdater />} />
+          <Route path="/summary" element={<Summary />} />
+        </Routes>
       </Container>
     </>
   );

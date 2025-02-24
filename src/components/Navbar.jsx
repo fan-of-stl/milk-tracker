@@ -1,5 +1,6 @@
 import { AppBar, Toolbar, Typography, IconButton, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -17,15 +18,27 @@ const Navbar = () => {
           Milk Tracker
         </Typography>
         <Box sx={{ display: "flex", gap: 3 }}>
-          <Typography variant="h6" component="div">
-            Home
-          </Typography>
-          <Typography variant="h6" component="div">
-            Price Updater
-          </Typography>
-          <Typography variant="h6" component="div">
-            Summary
-          </Typography>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Typography variant="h6" component="div">
+              Home
+            </Typography>
+          </Link>
+          <Link
+            to="/price-updater"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Typography variant="h6" component="div">
+              Price Updater
+            </Typography>
+          </Link>
+          <Link
+            to="/summary"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Typography variant="h6" component="div">
+              Summary
+            </Typography>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>
